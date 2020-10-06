@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>E-Commerce</title>
+    <meta name="description" content="E-Commerce website to buy stuff online."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="./assets/StyleSheets/common.css"/>
+    <link rel="stylesheet" href="./assets/StyleSheets/header.css"/>
+    <link rel="stylesheet" href="./assets/StyleSheets/cards.css"/>
+    <link rel="stylesheet" href="./assets/StyleSheets/shoppingCart.css"/>
+    <link rel="stylesheet" href="./assets/StyleSheets/test.css"/>
+    <link rel="stylesheet" href="./assets/StyleSheets/sideMenu.css"/>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <nav class="nav d-flex centering">
+
+            <a href="#" onclick="getData(this)" class="logo link"><span class="cart">E</span>commerce</a>
+
+
+            <!-- collapsable links for smaller screens -->
+            <div class="header-links-wrapper" id="links">
+                <ul class="header-links">
+
+                    <li class="link-item"> <a onclick="getDataByCategory(`random`)" href="javascript:void(0)"
+                            class="link product-link checked">Random</a></li>
+                    <li class="link-item"> <a onclick="getDataByCategory(`men clothing`)" href="javascript:void(0)"
+                            class="link product-link">Men</a></li>
+                    <li class="link-item"> <a onclick="getDataByCategory(`women clothing`)" href="javascript:void(0)"
+                            class="link product-link">Women</a></li>
+                    <li class="link-item"> <a onclick="getDataByCategory(`jewelery`)" href="javascript:void(0)"
+                            class="link product-link">Accessories</a></li>
+                    <li class="link-item"> <a onclick="getDataByCategory(`electronics`)" href="javascript:void(0)"
+                            class="link product-link">Electronics</a></li>
+                </ul>
+            </div>
+
+
+            <ul>
+                <li class="link-item"> <a href="#" class="link"><img src="./assets/icons/search.svg" alt="search icon"> </a></li>
+                <li class="link-item"> <a href="#" class="link message">
+                        <img class="x" src="./assets/icons/message.svg" alt="messages for user"></a></li>
+                <li class="link-item"> <a href="#" class="link user-icon d-flex centering">Ibtehal Amro</a></li>
+                <li class="link-item"> <a href="#" class="link"><img src="./assets/icons/exit.svg" alt="exit icon">
+                    </a></li>
+                <li class="link-item"> <a href="#" class="link"> <img class="toggle-header-links-wrapper"
+                            id="header-toggler" src="./assets/icons/menu.svg" alt=" menu icon">
+                    </a></li>
+            </ul>
+
+        </nav>
+    </header>
+   
+    <div class="options-menu">
+        <div class="options-button" onclick="showSideMenu()">
+            <img class="" src="./assets/icons/view-1.svg" alt="change the view ">
+        </div>
+        <div class="dark-mode">
+            <img class="dark-mode-img" src="./assets/icons/night-mode.svg" alt="dark mode icon">
+        </div>
+        <div class="cards-slider">
+            <input type="range" min="150" max='200' value="240" step="10" class="slider" id="width-slider">
+          </div>
+
+    </div>
+
+
+    <main class="main-content d-flex ">
+        <!--cards-wrapper: holds all the cards that related to the items   -->
+        <section class="products-wrapper">
+            <!-- item-card will have the image of the item, description,price, item section(men or women) -->
+        </section>
+
+        <sidebar class="shopping-cart-section d-flex">
+            <header>
+                <h3>Cart</h3>
+            </header>
+            <main class="cart-main d-flex">
+                <section id="drop" class="cart-products droppale">
+
+                </section>
+                <section class="cart-total">
+                    <div class="line d-flex">
+                        <h2 class="text">Total:</h2>
+                        <h2 class="total number">0$</h2>
+                    </div>
+                    <div class="line d-flex">
+                        <h2 class="text">Taxes(15%):</h2>
+                        <h2 class="tax number">0$</h2>
+                    </div>
+                    <div class="line d-flex">
+                        <h2 class="text">Total Sum:</h2>
+                        <h2 class="total-sum number">0$</h2>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <button>Checkout</button>
+            </footer>
+        </sidebar>
+    </main>
+
+    <script src="./assets/JavaScripts/main.js" async defer>
+    </script>
+</body>
+
+</html>

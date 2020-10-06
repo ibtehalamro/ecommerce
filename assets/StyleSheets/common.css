@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap");
+/* color pallet */
+:root {
+  --bright-gold-color: rgb(254, 232, 123);
+  --warm-gold-color: rgb(255, 165, 0);
+  --body-color: white;
+  --orange-color: rgb(255, 161, 74);
+  --red-color: rgba(216, 49, 43, 0.76);
+  --card-body-color: white;
+  --text-color: black;
+--red-color-hover:rgba(255, 0, 0, 0.87);
+  --black-color: rgb(0, 0, 0);
+  --black-opacity-color: rgba(0, 0, 0, 0.5);
+  --light-blue-color: rgb(31, 144, 236);
+  --purple-color: rgba(153, 59, 119, 0.89);
+  --purple-color-hover: rgba(217, 0, 255, 0.959);
+--shopping-cart-text-darker-color:rgb(80, 79, 79);
+--shopping-cart-text-color:rgb(109, 102, 102);
+}
+
+/* set the initial font sizes */
+:root {
+  --font-regular: 600;
+  --font-bold: 700;
+  --header-height: 3rem;
+  --header-icon-width: 1.5rem;
+  --header-icon-height: 1.1rem;
+}
+/* setting the font weights */
+:root {
+  --large-font-size: 3rem;
+  --regular-font-size: 1rem;
+  --small-font-size: 0.75rem;
+
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  cursor: pointer;
+}
+body {
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  color: var(--black-color);
+  position: relative;
+  background-color: var(--body-color);
+}
+.main-content {
+  flex-direction: column-reverse;
+  margin: 0 0.5rem;
+  position: relative;
+  padding-top: 2rem;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.centering {
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --large-font-size: 6rem;
+    --regular-font-size: 1rem;
+    --small-font-size: 0.8rem;
+
+    --h1-font-size: 1.25rem;
+    --h2-font-size: 1.1rem;
+  }
+  body {
+    font-size: 16px;
+  }
+  .main-content {
+    flex-direction: row;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    margin: 0px;
+  }
+}

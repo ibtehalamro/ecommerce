@@ -1,0 +1,148 @@
+.page-header {
+  background-color: var(--black-color);
+  width: 100%;
+position: fixed;
+ top: 0;
+  color: white;
+  font-weight: var(--font-bold);
+z-index: 1000;
+  padding: 0 0.5rem;
+  
+}
+.nav {
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  color: white;
+  position: relative;
+}
+a{
+  display: flex ;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: nowrap;
+}
+.link .cart::after{
+  background-image: url('../icons/cart.svg');
+  background-size: 1.5em 1.5em;
+  display: inline-block;
+  width:1.5em; 
+  height: 1.5em;
+ background-repeat: no-repeat;
+ 
+  content:"";
+
+}
+.link img {
+  width: var(--header-icon-width);
+  height: var(--header-icon-height);
+}
+
+
+.user-icon::before{
+  display: inline-block;
+  background: url('../icons/user.svg') no-repeat ;
+  background-size: 100% 100%;
+  width: 3em;
+  height: 2em;
+  background-position: center;
+  content:"";
+  border-radius: 50%;
+   
+}
+
+
+.link-item .link.checked{
+  color:var(  --orange-color);
+}
+ 
+  ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+ ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 0.2em;
+}
+.message{
+  padding: 0 .5em 0 0;
+}
+.message::after{
+  content: "12";
+  width: 1.4em;
+  height:1.4em;
+  position: absolute;
+  right: 0;
+ bottom: 0;
+  background-color: #d9b00dc2;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-bold);
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* hovering eSffects  */
+.link:hover {
+  color: var(--light-blue-color);
+  text-shadow: 0 0px 5px rgba(255, 255, 255, 0.575);
+}
+
+/* media queries  */
+
+@media (max-width: 768px) {
+  .toggle-header-links-wrapper {
+    display: inline-block;
+  }
+  .header-links-wrapper {
+    z-index: 1222;
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgb(17, 109, 184);
+    transition: 0.5s;
+
+    border-left: 4px double white ;
+    overflow-y: auto;
+ 
+  }
+.header-links{
+  flex-direction: column;
+  
+  font-size: 1rem;
+
+
+}
+
+  .link-item {
+    
+    margin-bottom: 0.7rem;
+  }
+}
+.show {
+  right: 0;
+}
+@media (min-width: 768px) {
+  .toggle-header-links-wrapper {
+    display: none;
+  }
+  .header-links {
+    display: flex;
+  }
+  .header-links .link-item {
+    margin: 0 0.5rem;
+  }
+}
