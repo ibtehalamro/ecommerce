@@ -61,25 +61,24 @@
   --shopping-cart-text-color: rgb(240, 234, 234);
 }
 .cards-slider {
-  background-color: brown;
+  background-color:var(--bright-gold-color);
   width: 0%;
   position: absolute;
   right: 60px;
   top: 10px;
-  /* display: none; */
+ border-radius: 5%;
   transition: all 0.5s linear;
+  height:30px;
 }
 .slider {
+  margin: 10px 0;
   display: none;
   appearance: none;
   width: 100%;
   height: 10px;
-  background: #d3d3d3;
+  background: var( --black-opacity-color);
   outline: none;
-
   -webkit-appearance: none;
-
- 
 }
 
 .slider::-webkit-slider-thumb {
